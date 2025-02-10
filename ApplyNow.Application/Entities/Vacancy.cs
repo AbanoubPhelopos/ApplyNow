@@ -19,6 +19,6 @@ public class Vacancy
     public DateTime ExpiredAt { get; set; }
     public DateTime? DeactivatedAt { get; set; }
     public bool IsActive() => DateTime.Now <= ExpiredAt && ApplicationCount < MaxApplications && DeactivatedAt is null;
-    public AppUser CreatedBy { get; set; } = null!;
+    //public AppUser CreatedBy { get; set; } = null!;
     public ICollection<ApplicationModel> Applications { get; set; } = [];//Not To Be Null
 }
