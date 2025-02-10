@@ -1,5 +1,5 @@
 ﻿namespace Core.Entities;
-public class Application
+public class ApplicationModel
 {
     public int VacancyId { get; set; }
     public Vacancy Vacancy { get; set; } = null!;
