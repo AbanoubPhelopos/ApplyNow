@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,6 +20,7 @@
     <ProjectReference Include="..\ApplyNow.Application\ApplyNow.Application.csproj" />
     <ProjectReference Include="..\ApplyNow.Repository\ApplyNow.Repository.csproj" />
     <ProjectReference Include="..\ApplyNow.Services\ApplyNow.Services.csproj" />
+    <ProjectReference Include="..\ApplyNow.Utility\ApplyNow.Utility.csproj" />
   </ItemGroup>
 
 </Project>

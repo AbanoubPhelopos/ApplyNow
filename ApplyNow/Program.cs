@@ -1,6 +1,8 @@
 using Microsoft.Extensions.Configuration;
 using ApplyNow.Application.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using ApplyNow.Application.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,9 @@ builder.Services.AddControllersWithViews();
 // Fix: Use builder.Configuration instead of Configuration
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+
+builder.Services.AddIdentity<User, IdentityRole<Guid>>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
 var app = builder.Build();
 
